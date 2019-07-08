@@ -1,0 +1,16 @@
+Executable = /sphenix/user/gregtom3/SBU/research/analysis/EICAnalysis/eventgen/18x275_1M_sartre.sh
+Requirements = (CPU_Experiment == "phenix") 
+PeriodicHold = (NumJobStarts>=1 && JobStatus == 1) 
+Output = /sphenix/user/gregtom3/SBU/research/analysis/EICAnalysis/eventgen/18x275_1M_sartre.out
+Error =	 /sphenix/user/gregtom3/SBU/research/analysis/EICAnalysis/eventgen/18x275_1M_sartre.err 
+Log = /sphenix/user/gregtom3/SBU/research/analysis/EICAnalysis/eventgen/18x275_1M_sartre.log
+Universe = vanilla 
+Priority = +0 
+Input = /dev/null 
+GetEnv = False 
+Initialdir = /sphenix/user/gregtom3/SBU/research/analysis/EICAnalysis/eventgen
++Experiment = "sphenix" 
++Job_Type = "cas" 
+Notification = Always 
+Notify_user = gregcondorjobs@gmail.com 
+Queue

@@ -1,0 +1,14 @@
+#!/bin/tcsh
+setenv HOME /phenix/u/gregtom3
+source /etc/csh.login
+foreach i (/etc/profile.d/*.csh)
+   source $i
+end
+# Uncomment this if you have a login file 
+# source $HOME/.login
+source /opt/sphenix/core/bin/sphenix_setup.csh
+setenv SARTRE_DIR /opt/sphenix/core/sartre-1.20_root-5.34.36/sartre
+#-----#-----#----#----#----#----#----#----#----#
+cd /sphenix/user/gregtom3/data/HelpfulThings/condor
+time root -b -q let_condor_run_me.C
+

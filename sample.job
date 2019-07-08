@@ -1,0 +1,16 @@
+Executable = /sphenix/user/gregtom3/data/HelpfulThings/condor/sample.sh
+Requirements = (CPU_Experiment == "phenix") 
+PeriodicHold = (NumJobStarts>=1 && JobStatus == 1) 
+Output = /sphenix/user/gregtom3/data/HelpfulThings/condor/sample.out
+Error =	 /sphenix/user/gregtom3/data/HelpfulThings/condor/sample.err
+Log = /sphenix/user/gregtom3/data/HelpfulThings/condor/sample.log
+Universe = vanilla 
+Priority = +0 
+Input = /dev/null 
+GetEnv = False 
+Initialdir = /sphenix/user/gregtom3/data/HelpfulThings/condor
++Experiment = "sphenix" 
++Job_Type = "cas" 
+Notification = Always 
+Notify_user = john.doe@stonybrook.edu
+Queue
